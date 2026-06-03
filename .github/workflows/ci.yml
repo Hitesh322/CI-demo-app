@@ -20,8 +20,8 @@ jobs:
       
       - name: Build Docker image
         run:  |
-           docker build -t hit52/ci-demo-app:latest .
+           docker build -t hit52/ci-demo-app:${{github.sha}} .
 
       - name: Push Docker image
         run: |
-          docker push hit52/ci-demo-app:latest
+          docker push hit52/ci-demo-app:${{github.sha}}
