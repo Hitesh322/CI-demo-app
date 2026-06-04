@@ -41,7 +41,7 @@ jobs:
 
   k8s:
     runs-on: self-hosted
-    needs: test
+    needs: docker
 
     steps:
 
