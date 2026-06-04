@@ -4,6 +4,15 @@ on:
     branches:
       - master
 jobs:
+
+  test:
+     runs-on: ubuntu-latest
+
+     steps:
+       - name: Print Message
+         run: echo "Running test job"
+
+
   docker:
     runs-on: self-hosted
 
