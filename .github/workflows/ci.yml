@@ -37,3 +37,16 @@ jobs:
       - name: Push Docker image
         run: |
           docker push hit52/ci-demo-app:$SHORT_SHA
+
+
+  k8s:
+    runs-on: self-hosted
+    needs: test
+
+    steps:
+
+
+      - name: Print message here
+        run: echo "k8s test job here"
+      
+    
